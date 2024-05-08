@@ -1,0 +1,138 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    position: absolute;
+    display: flex;
+    top:0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer{
+    position: absolute;
+    width:55vw;
+    height:79vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 3vh;
+    gap:3vh;
+}
+
+.cardCross{
+    color:red;
+    position: relative;
+    top:2vh;
+    left:52.5vw;
+    font-size:1.2rem;
+}
+
+.cardContainer .slideContainer{
+    width: 85%;
+    display: flex;
+    gap:2vw;
+    margin-left:2.5vw;
+    height:10%;
+}
+
+.slideContainer .slides{
+    height:100%;
+    width:15%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    margin-top:8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.slidecross{
+    position: relative;
+    color:red;
+    bottom:0.2vh;
+    left:12%;
+}
+.slideContainer .selectedSlide{
+    height:100%;
+    width:15%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    margin-top:8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #73ABFF;
+    cursor: pointer;
+}
+
+.cardContainer .formContainer{
+    margin-top:7.5vh;
+    margin-left:2.5vw;
+    width:70%;
+}
+
+.formContainer form{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+    width:100%;
+}
+
+.formContainer form div{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.formContainer form div input{
+    width:60%;
+    border:1px solid black;
+    height:6vh;
+    padding-left:1vw;
+}
+
+.formContainer form div select{
+    width:63%;
+    border:1px solid black;
+    height:6vh;
+}
+
+.formContainer form div textarea{
+    width:57.3%;
+    height:11vh;
+    border:1px solid black;
+    padding:1vw;
+}
+
+.buttonContainer{
+    width:88%;
+    display: flex;
+    margin-left: 2.5vw;
+    justify-content: space-between;
+}
+
+.buttonContainer .leftButtons{
+    display: flex;
+    gap:2vw;
+}
+
+.buttonContainer button{
+    height:4vh;
+    width:6vw;
+    border-radius: 1rem;
+    border:none;
+    color:white;
+    font-size: 1.1rem;
+}
+
+
+
+

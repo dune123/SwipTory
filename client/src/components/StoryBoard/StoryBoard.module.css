@@ -1,0 +1,20 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.storyBoard{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+    align-items: center;
+    justify-content: flex-end;
+    height:30vh;
+}
+
+.storyViewer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal-width columns */
+  grid-gap: 7vw; 
+}

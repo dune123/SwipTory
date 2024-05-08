@@ -1,0 +1,119 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    position: absolute;
+    display: flex;
+    top:0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer{
+    width:40vw;
+    height:55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 3vh;
+}
+
+.closeContainer{
+    position: relative;
+    top:6vh;
+    left:14vw;
+    font-size: 1.6rem;
+    color:red;
+    cursor: pointer;
+}
+
+.cardContainer h3{
+    margin-top: 10vh;
+    margin-bottom: 4vh;
+}
+
+.cardContainer form{
+    display: flex;
+    flex-direction: column;
+    gap:5.5vh;
+    width:60%;
+    font-size: 1.3rem;
+}
+
+.cardContainer div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardContainer div input{
+    width:60%;
+    padding-left:0.3vw;
+}
+
+.cardContainer form button{
+    height: 5vh;
+    width:10vw;
+    margin-left:7.5vw;
+    border-radius: 3vh;
+    border:none;
+    background-color: #73ABFF;
+    color:white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.error{
+    color:red;
+    font-size: 0.5rem;
+    margin-left: 2vw;
+}
+
+.eye{
+    position: absolute;
+    right:38.4vw;
+    cursor: pointer;
+}
+
+@media (max-width:428px){
+    .cardContainer{
+        width:60vw;
+    }
+
+    .cardContainer div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardContainer form{
+        width:80%;
+        font-size: 1rem;
+    }
+
+    .cardContainer form div input{
+        width:100%;
+        height:45%
+    }
+
+    .cardContainer form button{
+        width:50%;
+        margin-right:3vw;
+    }
+
+    .closeContainer{
+        left:23vw;
+        top:2vh;
+    }
+
+    .eye{
+        top:58vh;
+        right:25vw;
+    }
+}

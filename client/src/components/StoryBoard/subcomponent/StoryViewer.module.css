@@ -1,0 +1,15 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family:sans-serif
+}
+
+.storyContainer{
+    height:100%;
+    width:17vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

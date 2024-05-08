@@ -1,0 +1,166 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    width:96vw;
+    height:10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3vw;
+    padding-right:1vw;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.rightContainer{
+    display: flex;
+    height: 100%;
+    gap:1vw;
+    align-items: center;
+}
+
+.rightContainer button{
+    width:8vw;
+    height:70%;
+    border-radius: 2rem;
+    font-size: 1rem;
+    color:white;
+    border: none;
+    cursor: pointer;
+}
+
+.register{
+    background-color: #FF7373;
+}
+
+.signin{
+    background-color: #73ABFF;
+}
+
+.bookmark{
+    display: flex;
+    align-items: center;
+    background-color: #FF7373;
+    justify-content: center;
+}
+
+.menu{
+    display: none;
+}
+
+.menuContainerDesktop{
+    position: absolute;
+    top:10vh;
+    right:0vw;
+    height:20vh;
+    width:17vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    gap:2vh;
+}
+
+.menuContainerDesktop .username{
+    margin-top: 2vh;
+}
+
+.menuContainerDesktop button{
+    width:55%;
+    height:30%;
+    border-radius: 2rem;
+    font-size: 1rem;
+    color:white;
+    border: none;
+    cursor: pointer;
+    background-color: #FF7373;
+}
+
+.menuForDestop{
+    font-size: 1.2rem;
+}
+
+@media (max-width:428px){
+    .rightContainer button{
+        display: none;
+    }
+    .menu{
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        width: 6vw;
+        height: 100%;
+    }
+
+    .menuContainer{
+        width:100%;
+        height:55vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:1vh;
+        position: absolute;
+        top:10vh;
+    }
+
+    .smallButton{
+        display: flex;
+        flex-direction: column;
+        gap:1vh;
+        margin-top:15vh;
+    }
+
+    .menuContainer .smallButton button{
+        width:30vw;
+        height: 10vh;
+        font-size: 1rem;
+        border-radius:2rem ;
+        border: none;
+        background-color: #FF7373;
+        color:white;
+    }
+
+    .close{
+        position: relative;
+        top:1vh;
+        left:47vw;
+        font-size: 1.5rem;
+    }
+
+    .menuContainerForlogin{
+        width:100%;
+        height:55vh;
+        display: flex;
+        flex-direction: column;
+        gap:2vh;
+        position: absolute;
+        top:10vh;
+    }
+
+    .menuContainerForlogin .closeForLogin{
+        position: relative;
+    }
+    .menuContainerForlogin button{
+        width:30vw;
+        height: 10vh;
+        font-size: 1rem;
+        border-radius:2rem ;
+        border: none;
+        background-color: #FF7373;
+        color:white;
+    }
+
+    .menuContainerForlogin small{
+        display: flex;
+        flex-direction: column;
+        gap:1vh;
+        margin-top:15vh;
+        align-items: center;
+    }
+    .menuContainerDesktop{
+        display: none;
+    }
+}
