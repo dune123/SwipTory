@@ -7,6 +7,6 @@ router.post("/addbookmark",requireAuth,addBookmark)
 router.post("/removeBookmark",requireAuth,removeBookmark)
 router.post("/like",requireAuth,likePost)
 router.get("/getPost",requireAuth,getallposts)
-router.get("/isBookmarked/slideId",requireAuth,isBookmarked)
+router.get("/isBookmarked/:slideId",requireAuth,isBookmarked)
 
 module.exports=router  

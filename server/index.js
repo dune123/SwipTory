@@ -8,6 +8,7 @@ dotenv.config();
 const userRoutes=require("./routes/userRoutes");
 const postRoutes=require("./routes/postRouter")
 const slideRoutes=require("./routes/slideRouter")
+const userPostRoutes=require("./routes/userPostRouter")
 
 const app=express();
 
@@ -25,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //routes
 app.use("/api/user",userRoutes);
 app.use("/api/story",postRoutes);
+app.use("/api/slide",userPostRoutes);
 app.use("/api/slide",slideRoutes)
 
 app.listen(process.env.PORT, () => {

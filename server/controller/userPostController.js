@@ -8,17 +8,17 @@ const addBookmark=async(req,res)=>{
         const {slideId}=req.body;
         const userId=req.user;
 
-        if(!userId||slideId){
+        if(!userId||!slideId){
             return res.status(400).json({err:"Both userId and slideId are required"})
         }
 
-        const user=await User.find({userId})
+        const user = await User.findById(userId);
 
         if(!user){
             return res.status(404).json({error:"User not found"})
         }
-
-        user.addBookmark.push({slideId})
+        
+        user.bookmarks.push(slideId)
 
         await user.save();
 
@@ -34,11 +34,11 @@ const removeBookmark=async(req,res)=>{
         const {slideId}=req.body;
         const userId=req.user;
 
-        if(!userId||slideId){
+        if(!userId||!slideId){
             return res.status(400).json({err:"Both userId and slideId are required"})
         }
 
-        const user=await User.find({userId})
+        const user = await User.findById(userId);
 
         if(!user){
             return res.status(404).json({error:"User not found"})
@@ -58,7 +58,7 @@ const likePost=async(req,res)=>{
     try {
         const {slideId}=req.body;
 
-        const userId=req.body;
+        const userId=req.user;
 
         if(!userId || !slideId) {
             return res
@@ -67,6 +67,7 @@ const likePost=async(req,res)=>{
           }
         
         const slide=await Slide.findById(slideId);
+        console.log(slideId)
         if(!slide){
             return res.status(404).json({error: "Slide not found" })
         }

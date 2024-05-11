@@ -10,11 +10,12 @@
     gap:2vh;
     align-items: center;
     justify-content: flex-end;
-    height:30vh;
+    height:50vh;
 }
 
 .storyViewer{
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Four equal-width columns */
   grid-gap: 7vw; 
+  height:45vh;
 }

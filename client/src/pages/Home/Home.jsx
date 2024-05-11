@@ -38,7 +38,6 @@ const filters = [
 
 const Home = () => {
   const [selectedCategory,setSelectedCategory]=useState("All");
-  const [totalStory,setTotalStory]=useState(null);
 
   const handleCategory = (name) => {
     const category = document.getElementById(name);

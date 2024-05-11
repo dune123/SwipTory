@@ -20,7 +20,7 @@ const StoryBoard = ({category}) => {
   return (
     <div className={styles.storyBoard}>
         <h1>Top Stories {category}</h1>
-        <div className={styles.storyViewer}>
+        <div class={styles.storyViewer}>
         {
             story&&story.map((slidesData, index) =>(
                 <StoryViewer slideData={slidesData} key={index}/>
