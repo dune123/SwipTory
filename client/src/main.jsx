@@ -1,7 +1,7 @@
 import React,{createContext,useState} from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-
+import { BrowserRouter } from "react-router-dom";
 export const Context=createContext({
   isAuthenticated:true
 })
@@ -9,6 +9,7 @@ export const Context=createContext({
 const AppWrapper=()=>{
   const [isAuthenticated,setIsAuthenticated]=useState(false);
   const [user,setUser]=useState({})
+  const [showLogin,setShowLogin]=useState(null);
 
   return(
     <Context.Provider
@@ -16,7 +17,9 @@ const AppWrapper=()=>{
         isAuthenticated,
         setIsAuthenticated,
         user,
-        setUser
+        setUser,
+        showLogin,
+        setShowLogin
       }}
     >
       <App/>
@@ -25,6 +28,8 @@ const AppWrapper=()=>{
 }
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+  <BrowserRouter>
       <AppWrapper/>
+  </BrowserRouter>
   </React.StrictMode>
 );

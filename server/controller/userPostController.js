@@ -129,12 +129,13 @@ const getallBookmark=async(req,res)=>{
     try {
         const userId=req.user;
 
-        const user=await User.findById(userId).populate("bookmark")
-
+        const user=await User.findById(userId).populate("bookmarks")
+        //const user=await User.findById(userId)
+       
         if(!user){
             return res.status(404).json({ error: "User not found" });
         }
-
+        
         const bookmarks=user.bookmarks.map((bookmark)=>{
             const slide=bookmark;
             return {

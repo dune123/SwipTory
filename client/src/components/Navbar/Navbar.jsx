@@ -17,7 +17,7 @@ const Navbar = () => {
   const [showRegisterCard, setShowRegisterCard] = useState(false);
   const [showLoginCard, setShowLoginCard] = useState(false);
   const [showAddStoryCard, setShowAddStoryCard] = useState(false);
-  const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+  const { isAuthenticated, setIsAuthenticated} = useContext(Context);
 
   const username = window.localStorage.getItem("username");
   const token = window.localStorage.getItem("token");
@@ -44,7 +44,7 @@ const Navbar = () => {
     <>
       <div className={styles.container}>
         <div className={styles.leftContainer}>
-          <h1>SwipTory</h1>
+          <h1 onClick={()=>navigate("/")}>SwipTory</h1>
         </div>
         {!isAuthenticated ? (
           <div className={styles.rightContainer}>
@@ -70,7 +70,7 @@ const Navbar = () => {
             <button
               className={styles.bookmark}
               onClick={() => {
-                navigate("/");
+                navigate("/bookmark");
               }}
             >
               <IoIosBookmark />

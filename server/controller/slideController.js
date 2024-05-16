@@ -1,8 +1,9 @@
 const Slide=require("../models/slide")
 
 const getSlideData=async(req,res)=>{
-    const {id}=req.params;
     try {
+        const {id}=req.params;
+        
         const slide=await Slide.findById(id);
         if(!slide){
             return res.status(404).send({message:"Slide not found"});
